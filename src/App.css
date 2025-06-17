@@ -1,0 +1,187 @@
+/* Geral */
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(to right, #ffeeee, #ddeeff);
+  user-select: none;
+  overflow-x: hidden;
+}
+
+.App {
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Título e Pontos */
+h1 {
+  color: #333;
+  text-shadow: 1px 1px 2px #fff;
+}
+
+.score-display {
+  font-size: 2rem;
+  margin: 1.5rem auto;
+  padding: 0.5rem 1rem;
+  background: #fff8;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #aaa;
+  width: fit-content;
+}
+
+/* Botão de Clique */
+.image-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: transform 0.1s ease;
+  position: relative;
+}
+
+.image-button:active {
+  transform: scale(0.95);
+}
+
+.icon {
+  width: 120px;
+  height: 120px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Loja */
+.shop-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s;
+  z-index: 1001;
+}
+
+.shop-toggle:hover {
+  transform: rotate(15deg);
+}
+
+.shop {
+  .shop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 220px; /* menor largura */
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.95);
+  border-left: 2px solid #ccc;
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  overflow-y: auto;
+  animation: slideIn 0.4s ease forwards;
+  z-index: 999;
+}
+
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.shop h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.shop-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f4f4f4;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #aaa;
+  transition: background 0.3s;
+}
+
+.shop-item:hover {
+  background: #e0e0e0;
+}
+
+.shop-item button {
+  background: #88cc88;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.shop-item button:hover {
+  background: #66bb66;
+}
+
+/* Texto Flutuante */
+.floating-text {
+  position: absolute;
+  color: #28a745;
+  font-weight: bold;
+  font-size: 1.2rem;
+  pointer-events: none;
+  animation: floatUp 1s ease-out forwards;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -150%) scale(1.5);
+  }
+}
+.shop-toggle.transparent {
+  opacity: 0;
+
+}
+
+/* Botão de fechar loja */
+.shop-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-shop {
+  background: #ff4d4d;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.close-shop:hover {
+  background: #cc0000;
+}
